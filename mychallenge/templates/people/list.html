@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br><br>
+<a href="{% url 'index' %}">Back to Name Lists</a>
+<br><br>
+		  	<table border="1" cellspacing="1"align="center">
+		  		<tr>
+		  			<th>Firstname</th>
+		  			<th>Lastname</th>
+		  			<th>Nickname</th>
+		  			<th>Email ID</th>
+		  		</tr>
+		  		<tr>
+		  			<td>{{person.firstname|capfirst}}</td>
+		  			<td>{{person.lastname|capfirst}}</td>
+		  			<td>{{person.nickname}}</td>
+		  			<td>{{person.email}}</td>
+		  		</tr>
+		  	</table>
+{% endblock content %}

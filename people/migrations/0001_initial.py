@@ -1,0 +1,23 @@
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+
+from django.db import models, migrations
+
+
+class Migration(migrations.Migration):
+
+    dependencies = [
+    ]
+
+    operations = [
+        migrations.CreateModel(
+            name='person',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', primary_key=True, serialize=False, auto_created=True)),
+                ('firstname', models.CharField(max_length=50)),
+                ('lastname', models.CharField(max_length=50)),
+                ('nickname', models.CharField(max_length=50)),
+                ('email', models.EmailField(max_length=254)),
+            ],
+        ),
+    ]

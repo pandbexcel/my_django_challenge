@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p>You are very much welcome to this great project.<br> This project is all about viewing all the names in my database
+	and also adding and updating the details as you deem it fit.<br> I wish you a happy Exploration. Thank You.</p>
+	<hr>
+	<h3>Below is a list of the  First Names of People saved to my Database</h3>
+	<ul>
+		{% for person in persons %}
+		<li>
+			<a href="{% url 'list_detail' person.id %}">
+				{{person.firstname|capfirst}}
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
+{% endblock content %}
